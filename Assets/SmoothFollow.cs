@@ -1,16 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class CamFollowsPlayer : MonoBehaviour
+public class SmoothFollow : MonoBehaviour
 {
     public Transform Target;
-    public Vector3 Offset;
-    public Transform LookAtTarget;
     public float damper;
-    public float lookatdamper;
+    public Vector3 Offset;
 
-    private void Start()
+    private void Awake()
     {
         Offset = transform.position - Target.position;
     }
@@ -18,6 +14,5 @@ public class CamFollowsPlayer : MonoBehaviour
     private void LateUpdate()
     {
         transform.position = Vector3.Lerp(transform.position, Target.position + Offset, damper * Time.deltaTime);
-        transform.LookAt(LookAtTarget);
     }
 }

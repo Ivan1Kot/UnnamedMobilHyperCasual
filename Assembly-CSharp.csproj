@@ -58,11 +58,13 @@
   <ItemGroup>
     <Compile Include="Assets\Movement.cs" />
     <Compile Include="Assets\Car.cs" />
+    <Compile Include="Assets\CamFollowsPlayer.cs" />
     <Compile Include="Assets\CarController.cs" />
+    <Compile Include="Assets\CameraFollow.cs" />
     <Compile Include="Assets\StandartInput.cs" />
     <Compile Include="Assets\NewInput.cs" />
     <Compile Include="Assets\Wheel.cs" />
-    <Compile Include="Assets\CamFollowsPlayer.cs" />
+    <Compile Include="Assets\SmoothFollow.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

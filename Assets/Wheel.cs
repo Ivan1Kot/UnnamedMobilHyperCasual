@@ -14,6 +14,7 @@ public class Wheel : MonoBehaviour
     public float SteerAngle { get; set; }
     public float SteerSpeed { get; set; }
     public float Torgue { get; set; }
+    public float BrakesTorgue { get; set; }
 
     private void Update()
     {
@@ -31,6 +32,7 @@ public class Wheel : MonoBehaviour
         if(_power)
         {
             _wheelCollider.motorTorque = Torgue;
+            _wheelCollider.brakeTorque = BrakesTorgue;
         }
     }
 }
